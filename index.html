@@ -39,7 +39,7 @@
     </svg>
     <!--Fin Iconos Cambio Claro / Oscuro-->
 
-    <!---Boton de Cambio a Claro / Oscuro-->
+    <!---Botón de Cambio a Claro / Oscuro-->
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
       <button class="btn btn-primary py-2 dropdown-toggle d-flex align-items-center"
               id="bd-theme"
@@ -75,6 +75,12 @@
       </ul>
     </div>
     <!--fin de iconos cambio Claro / Oscuro-->
+
+    <style>
+      .bd-mode-toggle {
+        z-index: 1050;
+      }
+    </style>
 
     <!--Header-->
     <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
@@ -118,33 +124,33 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#app_js_2">
+                  <a class="nav-link d-flex align-items-center gap-2" href="#app_js_1">
                     <img src="img/edad.png">
-                    Edad
+                    Clasificación de edad
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex align-items-center gap-2" href="#app_js_2">
+                    <img src="img/imc.png">
+                    Calcular su IMC
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link d-flex align-items-center gap-2" href="#app_js_3">
-                    <img src="img/imc.png">
-                    IMC
+                    <img src="img/presion_arterial.png">
+                    Presión arterial
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link d-flex align-items-center gap-2" href="#app_js_4">
-                    <img src="img/presion_arterial.png">
-                    Presion arterial
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#app_js_5">
                     <img src="img/personas.png">
                     Peso y Altura
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#app_js_6">
+                  <a class="nav-link d-flex align-items-center gap-2" href="#app_js_5">
                     <img src="img/imc.png">
-                    Peso ideal
+                    Calculadora de Peso Ideal
                   </a>
                 </li>
               </ul>
@@ -163,12 +169,37 @@
           <!-- Contenedor -->
           <div class="container  ">
             
-            <!--Row2 Formulario 2-->
-            <div id="app_js_2" class="row d-flex justify-content-center align-items-center">
+            <!--Row1 Formulario 1-->
+            <div id="app_js_1" class="row d-flex justify-content-center align-items-center">
               <div class="col-md-10 py-5">
                   <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
                     <h3 class="h3">EDAD</h3>
-                <p>Diseñar un algoritmo en JS que identifique si una persona es niño, joven, adulto o adulto mayor. <br>Para lo cual debe leer su edad. <br>Si la edad es menor o igual a 12 años, el algoritmo debe indicar "Eres un niño" <br>Si la edad es mayor a 12 años y menor o igual a 40 años, el algoritmo debe indicar "Eres un joven" <br>Si la edad es mayor a 40 años y menor o igual a 60 años, el algoritmo debe indicar "Eres un adulto" <br>Si la edad es mayor a 60 años el algoritmo debe indicar "Eres un adulto mayor"</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1" style="margin: 0px 0px 10px 0px;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                      </svg>
+                      Más Información
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h3 class="modal-title fs-5 mb-3" id="staticBackdropLabel">Edad</h3>
+                            <button type="button" class="btn-close mb-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Diseñar un algoritmo en JS que identifique si una persona es niño, joven, adulto o adulto mayor. <br>Para lo cual debe leer su edad. <br>Si la edad es menor o igual a 12 años, el algoritmo debe indicar "Eres un niño" <br>Si la edad es mayor a 12 años y menor o igual a 40 años, el algoritmo debe indicar "Eres un joven" <br>Si la edad es mayor a 40 años y menor o igual a 60 años, el algoritmo debe indicar "Eres un adulto" <br>Si la edad es mayor a 60 años el algoritmo debe indicar "Eres un adulto mayor"</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <div class="form-floating mb-3">
                       <input type="number" class="form-control" id="edad" placeholder="Ingrese su edad">
                       <label for="floatingInput">Ingrese su edad</label>
@@ -179,14 +210,40 @@
                   </form>
               </div>
             </div>
-            <!--Fin Row2 Formulario 2-->
+            <!--Fin Row1 Formulario 1-->
 
-            <!--Row1 Formulario 3-->
-            <div id="app_js_3" class="row  d-flex justify-content-center align-items-center">
+            <!--Row2 Formulario 2-->
+            <div id="app_js_2" class="row  d-flex justify-content-center align-items-center">
               <div class="col-md-10 py-5">
                   <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
                     <h3 class="h3">CALCULAR SU IMC</h3>
-                    <p><strong>Diseñe un algoritmo que calcule el IMC de cada persona e indique en que condicion esta su peso.</strong></p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" style="margin: 0px 0px 10px 0px;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                      </svg>
+                      Más Información
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h3 class="modal-title fs-5" id="staticBackdropLabel">Calcular su IMC</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Diseñe un algoritmo que calcule el IMC de cada persona e indique en que condición esta su peso.</p>
+                            <img src="img/tabla_imc_1.jpg" alt="#" class="mb-3" style="width: 100%;">
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <div class="form-floating mb-3">
                       <input type="number" class="form-control" id="peso" placeholder="Ingrese su peso (En kilogramos)">
                       <label for="floatingPassword">Ingrese su peso (En kilogramos)</label>
@@ -201,17 +258,43 @@
                   </form>
               </div>
             </div>
-            <!--Fin Row1 Formulario 3-->
+            <!--Fin Row2 Formulario 2-->
 
-            <!--Row1 Formulario 4-->
-            <div id="app_js_4" class="row d-flex justify-content-center align-items-center">
+            <!--Row3 Formulario 3-->
+            <div id="app_js_3" class="row d-flex justify-content-center align-items-center">
               <div class="col-md-10 py-5">
                   <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
-                    <h3 class="h3">CLASIFICACION DE PRESION ARTERIAL</h3>
-                    <p><strong>Diseñe un algoritmo que diga en que clasificacion se encuentra la presion arterial de cada persona.</strong></p>
+                    <h3 class="h3">CLASIFICACIÓN DE PRESIÓN ARTERIAL</h3>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop3" style="margin: 0px 0px 10px 0px;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                      </svg>
+                      Más Información
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h3 class="modal-title fs-5" id="staticBackdropLabel">clasificación de presión arterial</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                          <p>Diseñe un algoritmo que diga en que clasificación se encuentra la presión arterial de cada persona.</p>
+                          <img src="img/tabla_pA.jpg" alt="#" class="mb-3" style="width: 100%;">
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <div class="form-floating mb-3">
-                      <input type="number" class="form-control" id="presionArterial" placeholder="Ingrese su presion arterial">
-                      <label for="floatingInput">Ingrese su presion arterial</label>
+                      <input type="number" class="form-control" id="presionArterial" placeholder="Ingrese su presión arterial">
+                      <label for="floatingInput">Ingrese su presión arterial</label>
                     </div>
                     <button class="w-100 btn btn-lg btn-primary" type="button" onclick="pA()">Verificar</button>
                     <hr class="my-4">
@@ -219,15 +302,41 @@
                   </form>
               </div>
             </div>
-            <!--Fin Row1 Formulario 4-->
+            <!--Fin Row3 Formulario 3-->
 
-            <!--Row2 Formulario 5-->
-            <div id="app_js_5" class="row d-flex justify-content-center align-items-center">
+            <!--Row4 Formulario 4-->
+            <div id="app_js_4" class="row d-flex justify-content-center align-items-center">
               <div class="col-md-10 py-5">
                   <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
                     <h1 class="h3">PESO Y ALTURA</h1>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop4" style="margin: 0px 0px 10px 0px;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                      </svg>
+                      Más Información
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h3 class="modal-title fs-5" id="staticBackdropLabel">Peso y Altura</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Completa los campos para calcular tu Peso y Altura.</p>
+                            <img src="img/tabla2.jpg" class="man mb-3"><img src="img/tabla1.jpg" class="girl mb-3">
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <p>Completa los campos para calcular tu Peso y Altura.</p>
-                    <img src="img/tabla2.jpg" class="man mb-3"><img src="img/tabla1.jpg" class="girl mb-3">
                     <div class="form-floating mb-3">
                       <input type="text" class="form-control" id="sexo" placeholder="Sexo" style="text-transform: uppercase;">
                       <label for="floatingInput">Sexo</label>
@@ -242,9 +351,10 @@
                   </form>
               </div>
             </div>
-            <!--Fin Row2 Formulario 5-->
-            <!--Row2 Formulario 6-->
-            <div id="app_js_6" class="row d-flex justify-content-center align-items-center">
+            <!--Fin Row4 Formulario 4-->
+
+            <!--Row5 Formulario 5-->
+            <div id="app_js_5" class="row d-flex justify-content-center align-items-center">
               <div class="col-md-10 py-5">
                 <div class="card mt-4">
                   <div class="card-header bg-dark-subtle text-center">
@@ -279,7 +389,7 @@
                 </div>
               </div>
             </div>
-            <!--Fin Row2 Formulario 6-->
+            <!--Fin Row5 Formulario 5-->
           </div>
           <!--Fin Contenedor-->
         </main>
@@ -287,7 +397,15 @@
       </div>
     </div>
     <!--Fin Contenedor Fluido-->
-    
+
+    <!--Footer-->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center border-top" style="padding: 10px 30px;">
+      <p class="col-md-4 mb-0 text-body-secondary">© 2024 Cristian Dev.</p>
+      <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+    </footer>
+    <!--Fin del footer-->
     <!---Boostrap 5.3 JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!--Dashboard JS-->
